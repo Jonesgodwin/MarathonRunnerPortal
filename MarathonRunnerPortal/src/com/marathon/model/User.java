@@ -4,16 +4,19 @@ import java.time.LocalDateTime;
 
 public class User {
 
-    private int userId;
-    private String username;
-    private String email;
-    private String password;
-    private int age;
-    private String role;
+    public static final String ROLE_RUNNER = "RUNNER";
+    public static final String ROLE_ADMIN = "ADMIN";
+
+    private final int userId;
+    private final String username;
+    private final String email;
+    private final String password;
+    private final int age;
+    private final String role;
     private int marathonPoints;
     private boolean verified;
     private String status;
-    private LocalDateTime createdAt;
+    private final LocalDateTime createdAt;
 
     public User(int userId,
                 String username,
@@ -28,7 +31,6 @@ public class User {
         this.password = password;
         this.age = age;
         this.role = role;
-
         this.createdAt = LocalDateTime.now();
         this.status = "PENDING";
     }
@@ -75,6 +77,10 @@ public class User {
 
     public String getStatus() {
         return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public LocalDateTime getCreatedAt() {

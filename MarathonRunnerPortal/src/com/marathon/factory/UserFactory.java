@@ -17,7 +17,7 @@ public class UserFactory {
                 email,
                 password,
                 age,
-                "RUNNER");
+                User.ROLE_RUNNER);
 
         user.setMarathonPoints(500);
 
@@ -37,6 +37,6 @@ public class UserFactory {
                 email,
                 password,
                 age,
-                "ADMIN");
+                User.ROLE_ADMIN);
     }
 }

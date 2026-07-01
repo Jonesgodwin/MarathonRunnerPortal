@@ -4,11 +4,11 @@ import java.time.LocalDateTime;
 
 public class Race {
 
-    private int raceId;
-    private String raceName;
-    private String distance;
-    private String location;
-    private LocalDateTime raceDate;
+    private final int raceId;
+    private final String raceName;
+    private final String distance;
+    private final String location;
+    private final LocalDateTime raceDate;
     private boolean registrationOpen;
 
     public Race(int raceId,
@@ -16,7 +16,6 @@ public class Race {
                 String distance,
                 String location,
                 LocalDateTime raceDate) {
-
         this.raceId = raceId;
         this.raceName = raceName;
         this.distance = distance;
@@ -47,5 +46,9 @@ public class Race {
 
     public boolean isRegistrationOpen() {
         return registrationOpen;
+    }
+
+    public void setRegistrationOpen(boolean registrationOpen) {
+        this.registrationOpen = registrationOpen;
     }
 }

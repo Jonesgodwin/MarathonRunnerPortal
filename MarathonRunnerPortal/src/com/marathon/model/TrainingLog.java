@@ -4,23 +4,26 @@ import java.time.LocalDate;
 
 public class TrainingLog {
 
-    private int logId;
-    private int userId;
-    private double distance;
-    private int duration;
-    private LocalDate trainingDate;
+    private final int logId;
+    private final int userId;
+    private final double distance;
+    private final int duration;
+    private final LocalDate trainingDate;
 
     public TrainingLog(int logId,
                        int userId,
                        double distance,
                        int duration,
                        LocalDate trainingDate) {
-
         this.logId = logId;
         this.userId = userId;
         this.distance = distance;
         this.duration = duration;
         this.trainingDate = trainingDate;
+    }
+
+    public int getLogId() {
+        return logId;
     }
 
     public int getUserId() {
@@ -29,6 +32,10 @@ public class TrainingLog {
 
     public double getDistance() {
         return distance;
+    }
+
+    public int getDuration() {
+        return duration;
     }
 
     public LocalDate getTrainingDate() {

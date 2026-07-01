@@ -7,7 +7,7 @@ public class AuditLogger {
     private AuditLogger() {
     }
 
-    public static AuditLogger getInstance() {
+    public static synchronized AuditLogger getInstance() {
 
         if(instance == null) {
             instance = new AuditLogger();
