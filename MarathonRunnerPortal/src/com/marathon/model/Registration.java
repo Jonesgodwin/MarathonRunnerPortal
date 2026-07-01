@@ -4,13 +4,11 @@ import java.time.LocalDateTime;
 
 public class Registration {
 
-    private int userId;
-    private int raceId;
-    private LocalDateTime registeredAt;
+    private final int userId;
+    private final int raceId;
+    private final LocalDateTime registeredAt;
 
-    public Registration(int userId,
-                        int raceId) {
-
+    public Registration(int userId, int raceId) {
         this.userId = userId;
         this.raceId = raceId;
         this.registeredAt = LocalDateTime.now();
@@ -22,5 +20,9 @@ public class Registration {
 
     public int getRaceId() {
         return raceId;
+    }
+
+    public LocalDateTime getRegisteredAt() {
+        return registeredAt;
     }
 }
